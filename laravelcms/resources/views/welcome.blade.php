@@ -1,36 +1,109 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <title>Bootstrap 101 Template</title>
+	<head>
+		<title>Bootstrap 101 Template</title>
+		@include('common/refer')
+	</head>
+	<body>
+		<!-- navbar -->
+  	 	<div class="navbar navbar-fixed-top navbar-get" role="navigation" id="theheader">
+      	<div class="container clearfix">
 
-    <!-- Bootstrap -->
-    <link href="{{URL::asset('css/bootstrap.min.css')}}" rel="stylesheet">
+          	<a class="logo" href="/?c=default"><img src="{{URL::asset('/images/get32px.png')}}"><span class="get">Get</span>社区</a>
+          	<!-- <div class="new_message_notice"></div> -->
+          	<!-- <span class="exp">每日Get新知识</span> -->
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <h1>你好，世界！</h1>
-    <button type="button" class="btn btn-danger" aria-label="Left Align">
-	  <span class="glyphicon glyphicon-align-left" aria-hidden="true"></span>
-	</button>
+          	<div class="navbar-collapse collapse pull-right">
+          	<ul class="get-cate-nav">
+            	<li class="dropdown   active  ">
+                	<button class="btn btn-getnar dropdown-toggle" type="button"  onclick="location='/?c=default'">
+                  	新知
+                  	<span class="caret"></span>
+                	</button>
+	                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+						<li class=" active "><a href="/">全部</a></li>
+						<li class="" role="presentation"><a href="/?cate=1" role="menuitem" tabindex="-1">技术</a></li>
+						<li class="" role="presentation"><a href="/?cate=2" role="menuitem" tabindex="-1">设计</a></li>
+						<li class="" role="presentation"><a href="/?cate=3" role="menuitem" tabindex="-1">产品</a></li>
+						<li class="" role="presentation"><a href="/?cate=4" role="menuitem" tabindex="-1">创业</a></li>
+						<li class=""><a href="/?a=kb">我的</a></li>
+						<li class=""><a href="/?a=feed">我关注的</a></li>
+						<li class="" ><a href="/?a=submit" target="_blank">+添加新知</a></li>
+	                </ul>
+              	</li>
 
-	<button type="button" class="btn btn-danger btn-lg">
-	  <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Star
-	</button>
+				<li class="dropdown  ">
+					<button class="btn btn-getnar dropdown-toggle" type="button"  onclick="location='/?c=card'">
+					  卡片流
+					<span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+					  	<li class=""><a href="/?c=card">我的首页</a></li>
+					  	<li class=""><a href="/?c=card&a=explore">随便看看</a></li>
+					</ul>
+				</li>
+          	</ul>  
+          </div>
+      	</div><!-- /.container -->
+		</div><!-- /.navbar -->    
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="{{URL::asset('js/bootstrap.min.js')}}"></script>
-  </body>
+	    <div class="container">
+
+	      	<div class="row row-offcanvas row-offcanvas-right">
+	        <div class="col-xs-12 col-sm-9">
+	            <ul class="get-artiles" id="galist">
+					<li>
+						<div class="point">+5</div>
+					    <div class="avatar"><img src="http://tp4.sinaimg.cn/1088413295/50/40057000557/1" class="avatar"/></div>
+					    <div class="card">
+					    <h2><a href="/8504.get" target="_blank">利用Hook把Git当网站发布工具用 </a></h2>
+				        <div class="action clearfix">
+					        <ul class="actions">
+								<li><time class="timeago" datetime="2016-05-06 20:19:09">2016-05-06 20:19:09</time></li>
+								<li class="tauthor"><a href="/1.user" target="_blank" class="green">推荐人&nbsp;<a href="/1.user" target="_blank" class="get">Easy</a></a></li>
+								<li><a href="8504.get" target="_blank" >阅读全文</a></li>
+								<li ><a href="javascript:add2kb('8504');" class="kblink-8504">+收藏到知识库</a></li>
+					        </ul>	        
+					      </div>
+					    </div> 
+					</li>
+
+					<li>
+						<div class="point">+5</div>
+					    <div class="avatar"><img src="http://tp4.sinaimg.cn/1088413295/50/40057000557/1" class="avatar"/></div>
+					    <div class="card">
+					    <h2><a href="/8504.get" target="_blank">利用Hook把Git当网站发布工具用 </a></h2>
+				        <div class="action clearfix">
+					        <ul class="actions">
+								<li><time class="timeago" datetime="2016-05-06 20:19:09">2016-05-06 20:19:09</time></li>
+								<li class="tauthor"><a href="/1.user" target="_blank" class="green">推荐人&nbsp;<a href="/1.user" target="_blank" class="get">Easy</a></a></li>
+								<li><a href="8504.get" target="_blank" >阅读全文</a></li>
+								<li ><a href="javascript:add2kb('8504');" class="kblink-8504">+收藏到知识库</a></li>
+					        </ul>	        
+					      </div>
+					    </div> 
+					</li>
+
+					<li>
+						<div class="point">+5</div>
+					    <div class="avatar"><img src="http://tp4.sinaimg.cn/1088413295/50/40057000557/1" class="avatar"/></div>
+					    <div class="card">
+					    <h2><a href="/8504.get" target="_blank">利用Hook把Git当网站发布工具用 </a></h2>
+				        <div class="action clearfix">
+					        <ul class="actions">
+								<li><time class="timeago" datetime="2016-05-06 20:19:09">2016-05-06 20:19:09</time></li>
+								<li class="tauthor"><a href="/1.user" target="_blank" class="green">推荐人&nbsp;<a href="/1.user" target="_blank" class="get">Easy</a></a></li>
+								<li><a href="8504.get" target="_blank" >阅读全文</a></li>
+								<li ><a href="javascript:add2kb('8504');" class="kblink-8504">+收藏到知识库</a></li>
+					        </ul>	        
+					      </div>
+					    </div> 
+					</li>
+
+				</ul>
+			</div>
+			</div>
+		</div>
+ 	</body>
 </html>
 
