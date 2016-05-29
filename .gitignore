@@ -1,5 +1,6 @@
 .settings
 .buildpath
 .project
-.idea
-.gitignore
+laravelcms/.env
+laravelcms/.env.example
+laravelcms/.gitattributes
