@@ -28,9 +28,9 @@ class User extends Model
 		return $res;
 	}
 	
-	public function userFind($id) 
+	public function userFind() 
 	{
-		$res = self::where('title','=','Router Views Controllers')->get();
+		//$res = self::where('name','=','小明', 'psw', '=', '')->get();
 		return $res;
 	}
 }

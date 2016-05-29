@@ -18,6 +18,7 @@ class UserController extends Controller
 	//注册
 	public function getRegister() {
 		$db = new User;
+		
 		//$res = $db->getAll();
 		return view('register');
 	}
@@ -34,9 +35,7 @@ class UserController extends Controller
 		$db = new User;
 		$res = $db->userAdd($user);
 		if (true === $res) {
-			echo "注册成功，跳转至登录页面";
-			sleep(2);
-			return redirect('User/index');
+			return "<script>alert('注册成功，跳转至登录页面');</script>";
 		} else {
 			return "something happend";
 		}
