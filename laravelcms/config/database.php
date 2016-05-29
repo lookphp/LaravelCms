@@ -60,7 +60,7 @@ return [
             'password'  => env('DB_PASSWORD', ''),
             'charset'   => 'utf8',
             'collation' => 'utf8_unicode_ci',
-            'prefix'    => '',
+            'prefix'    => 'cms_',
             'strict'    => false,
         ],
 
@@ -82,7 +82,7 @@ return [
             'username' => env('DB_USERNAME', 'forge'),
             'password' => env('DB_PASSWORD', ''),
             'charset'  => 'utf8',
-            'prefix'   => 'cms_',
+            'prefix'   => '',
         ],
 
     ],

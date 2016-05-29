@@ -14,7 +14,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/', 'CategoryController@index');
+Route::get('category', 'CategoryController@index');
 
 Route::controller('User', 'UserController');
 
