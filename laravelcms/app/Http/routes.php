@@ -11,15 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+/*Route::get('/', function () {
+    return view('category');
+});*/
 
-Route::controller('User', 'UserController');
+Route::get('/', 'CategoryController@index');
 
-//Route::get('home', 'HomeController@index');
 
-//Route::controllers([  
- //   'auth' => 'Auth\AuthController',
- //   'password' => 'Auth\PasswordController',
-//]);
+
