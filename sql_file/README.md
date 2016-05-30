@@ -8,13 +8,13 @@
 
 ##数据表前缀：cms_
 ##数据表名称：
-1.cms_articles  
-2.cms_articles_categories  
-3.cms_articles_contents  
-4.cms_articles_imgs   
-5.cms_categorys  
-6.cms_comments  
-7.cms_replies  
-8.cms_user  
+>1.cms_articles  
+>2.cms_articles_categories  
+>3.cms_articles_contents  
+>4.cms_articles_imgs   
+>5.cms_categorys  
+>6.cms_comments  
+>7.cms_replies  
+>8.cms_user  
 
 
