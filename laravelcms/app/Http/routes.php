@@ -16,4 +16,6 @@ Route::get('/', function () {
 
 Route::get('category', 'CategoryController@index');
 
-Route::controller('User', 'UserController');
+Route::controller('user', 'UserController');
+Route::controller('article', 'ArticleController');
+

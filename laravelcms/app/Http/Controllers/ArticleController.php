@@ -6,11 +6,12 @@
  */
 
 namespace App\Http\Controllers;
-
+use DB;
 use Illuminate\Http\Request;
 use App\Models\Article;
 use App\Models\ArticleContent;
 use App\Models\ArticleCategory;
+use Illuminate\Database\Eloquent\Model;
 
 class ArticleController extends Controller{
     /**
@@ -87,5 +88,29 @@ class ArticleController extends Controller{
     public function getDel()
     {
 
+    }
+    
+    /**
+     * 文章列表
+     */
+    public function getList()
+    {
+        $article = new Article();
+        $list = $article->get();
+        return view('article.list',['list' => $list]);
+    }
+    
+    /**
+     * 文章详情
+     */
+    public function getDetail()
+    {
+        $article = new Article();
+        $detail = $article->where('id',1)->first();
+        
+//         print_r($detail);
+var_dump($detail);
+
+        print_r(1111111111111);
     }
 }
